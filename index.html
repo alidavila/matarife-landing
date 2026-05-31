@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- SEO -->
+    <title>Matarife — Carne Premium a Domicilio | Tu Carnicero Digital</title>
+    <meta name="description" content="Matarife conecta las mejores carnicerías locales con tu mesa. Carne premium seleccionada, entrega a domicilio y calidad garantizada. Como Uber con los taxis — pero para tu carne.">
+    <meta name="keywords" content="carne premium a domicilio, carnicería online, comprar carne online, entrega de carne fresca, carnicero digital, matarife app">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://matarife.app/">
+    <meta property="og:title" content="Matarife — Carne Premium a Domicilio | Tu Carnicero Digital">
+    <meta property="og:description" content="Las mejores carnicerías locales conectadas con tu mesa. Carne premium, calidad garantizada, entrega a domicilio.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://matarife.app/">
+
+    <!-- PWA -->
+    <meta name="theme-color" content="#1C1917">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Matarife">
+    <link rel="apple-touch-icon" href="/icon-192.png">
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Matarife",
+      "url": "https://matarife.app",
+      "description": "Plataforma que conecta carnicerías locales con clientes. Carne premium a domicilio con calidad garantizada.",
+      "email": "ali@pulsoconnect.es"
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bone: #F5F3EF;
+            --carbon: #1A1A19;
+            --blood: #991b1b;
+            --blood-light: #b91c1c;
+            --warm: #d4a373;
+            --muted: #78716c;
+            --line: #e7e5e4;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--bone);
+            color: var(--carbon);
+            line-height: 1.6;
+        }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        /* Nav */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 16px 24px; background: rgba(245,243,239,0.95);
+            backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 10;
+            border-bottom: 1px solid var(--line);
+        }
+        .logo { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 800; color: var(--blood); }
+        .logo span { color: var(--carbon); font-weight: 600; }
+
+        /* Hero */
+        .hero {
+            text-align: center; padding: 80px 20px 60px;
+            background: linear-gradient(135deg, var(--bone) 0%, #ede8e0 100%);
+        }
+        .hero h1 {
+            font-size: clamp(32px, 6vw, 64px); font-weight: 900;
+            color: var(--carbon); line-height: 1.1; max-width: 600px; margin: 0 auto 16px;
+        }
+        .hero h1 em { color: var(--blood); font-style: normal; }
+        .hero p { font-size: clamp(16px, 2.5vw, 20px); color: var(--muted); max-width: 500px; margin: 0 auto 32px; }
+        .btn {
+            display: inline-block; padding: 14px 32px; border-radius: 8px;
+            font-weight: 700; font-size: 15px; text-decoration: none; transition: all .3s;
+        }
+        .btn-blood { background: var(--blood); color: #fff; }
+        .btn-blood:hover { background: var(--blood-light); transform: translateY(-1px); }
+        .btn-outline { border: 2px solid var(--carbon); color: var(--carbon); background: transparent; margin-left: 10px; }
+        .btn-outline:hover { background: var(--carbon); color: var(--bone); }
+
+        /* Sections */
+        .sec { padding: 80px 20px; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .sec h2 { font-size: clamp(24px, 4vw, 36px); font-weight: 800; text-align: center; margin-bottom: 8px; }
+        .sec .sub { text-align: center; color: var(--muted); font-size: 16px; margin-bottom: 48px; }
+
+        /* How it works */
+        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; }
+        .step { text-align: center; }
+        .step .num {
+            width: 56px; height: 56px; background: var(--blood); color: #fff;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 800;
+            margin: 0 auto 16px;
+        }
+        .step h3 { font-size: 18px; margin-bottom: 8px; }
+        .step p { color: var(--muted); font-size: 14px; line-height: 1.6; }
+
+        /* Why */
+        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+        .why-card {
+            background: #fff; border: 1px solid var(--line); border-radius: 12px;
+            padding: 28px; text-align: center; transition: all .2s;
+        }
+        .why-card:hover { border-color: var(--blood); }
+        .why-card .icon { font-size: 32px; margin-bottom: 12px; }
+        .why-card h3 { font-size: 17px; margin-bottom: 8px; }
+        .why-card p { color: var(--muted); font-size: 14px; }
+
+        /* CTA */
+        .cta-sec { background: var(--carbon); color: var(--bone); text-align: center; }
+        .cta-sec h2 { color: #fff; }
+        .cta-sec .sub { color: #a8a29e; }
+        .cta-sec .btn-blood { background: var(--blood); }
+
+        /* Waitlist form */
+        .form-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; max-width: 440px; margin: 0 auto; }
+        .form-row input {
+            flex: 1; min-width: 180px; padding: 14px 16px;
+            border: 2px solid var(--line); border-radius: 8px;
+            font-size: 14px; font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #fff;
+        }
+        .form-row input:focus { outline: none; border-color: var(--blood); }
+        #wl-msg { margin-top: 14px; font-size: 13px; display: none; }
+
+        /* Footer */
+        footer {
+            background: var(--carbon); color: var(--muted); text-align: center;
+            padding: 32px 20px; font-size: 13px;
+        }
+        footer a { color: var(--bone); text-decoration: none; }
+        footer a:hover { color: var(--warm); }
+
+        @media (max-width: 600px) {
+            nav { padding: 12px 16px; }
+            .hero { padding: 50px 16px 40px; }
+            .hero-actions { display: flex; flex-direction: column; gap: 10px; align-items: center; }
+            .btn-outline { margin-left: 0; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Mat<span>arife</span></div>
+        <div style="font-size:13px;color:var(--muted)">🥩 Carne Premium</div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Del <em>campo</em> a tu <em>mesa</em> sin intermediarios</h1>
+        <p>Conectamos las mejores carnicerías locales contigo. Como Uber con los taxis — pero para tu carne. Selección premium, calidad garantizada, directo a tu puerta.</p>
+        <div class="hero-actions">
+            <a href="#waitlist" class="btn btn-blood">Quiero acceso anticipado</a>
+            <a href="#how" class="btn btn-outline">Cómo funciona</a>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="sec" id="how">
+        <div class="container">
+            <h2>Así de simple</h2>
+            <p class="sub">Tres pasos. Cero complicaciones.</p>
+            <div class="steps">
+                <div class="step">
+                    <div class="num">1</div>
+                    <h3>Elige tu carnicería</h3>
+                    <p>Selecciona entre las mejores carnicerías de tu zona. Todas verificadas por calidad.</p>
+                </div>
+                <div class="step">
+                    <div class="num">2</div>
+                    <h3>Pide tu corte</h3>
+                    <p>Explora el catálogo: cortes premium, carnes maduradas, embutidos artesanales. Todo fresco.</p>
+                </div>
+                <div class="step">
+                    <div class="num">3</div>
+                    <h3>Recibe en casa</h3>
+                    <p>Entrega refrigerada el mismo día. Calidad garantizada o te devolvemos el dinero.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="sec" style="background:#fff">
+        <div class="container">
+            <h2>¿Por qué Matarife?</h2>
+            <p class="sub">No somos una carnicería más. Somos la red.</p>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="icon">🥩</div>
+                    <h3>Selección Premium</h3>
+                    <p>Solo trabajamos con carnicerías que pasan nuestro control de calidad. Cada corte, inspeccionado.</p>
+                </div>
+                <div class="why-card">
+                    <div class="icon">🚀</div>
+                    <h3>Entrega Rápida</h3>
+                    <p>Recibe tu pedido en el mismo día. Cadena de frío garantizada desde la carnicería hasta tu puerta.</p>
+                </div>
+                <div class="why-card">
+                    <div class="icon">💰</div>
+                    <h3>Precio Justo</h3>
+                    <p>Sin intermediarios inflando el precio. El carnicero gana más y tú pagas menos.</p>
+                </div>
+                <div class="why-card">
+                    <div class="icon">🔒</div>
+                    <h3>Garantía de Calidad</h3>
+                    <p>Si no estás satisfecho con tu pedido, te devolvemos el 100% de tu dinero. Sin preguntas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WAITLIST -->
+    <section class="sec cta-sec" id="waitlist">
+        <div class="container">
+            <h2>¿Quieres ser de los primeros?</h2>
+            <p class="sub">Déjanos tu email y te avisamos cuando Matarife llegue a tu zona. Sin spam, solo el aviso de lanzamiento.</p>
+            <form class="form-row" id="wl-form" onsubmit="submitWaitlist(event)">
+                <input type="text" id="wl-name" placeholder="Tu nombre" required>
+                <input type="email" id="wl-email" placeholder="tu@email.com" required>
+                <button type="submit" class="btn btn-blood">Quiero saber más</button>
+            </form>
+            <p id="wl-msg"></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Matarife — by <a href="https://pulsoconnect.es">PulsoConnect</a></p>
+    </footer>
+
+    <script>
+        async function submitWaitlist(e) {
+            e.preventDefault();
+            const name = document.getElementById('wl-name').value.trim();
+            const email = document.getElementById('wl-email').value.trim();
+            const msg = document.getElementById('wl-msg');
+            if (!name || !email) { msg.textContent = 'Completa nombre y email'; msg.style.color = '#ef4444'; msg.style.display = 'block'; return; }
+            try {
+                const r = await fetch('https://pulso-connect-crm.vercel.app/api/leads', {
+                    method: 'POST', headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, company: 'Matarife waitlist', source: 'web', status: 'nuevo', value: 0, notes: 'Waitlist Matarife — matarife.app' })
+                });
+                if (!r.ok) throw new Error(r.status);
+                msg.textContent = '✅ ¡Listo! Te avisaremos en el lanzamiento.';
+                msg.style.color = '#22c55e'; msg.style.display = 'block'; document.getElementById('wl-form').reset();
+            } catch (err) {
+                msg.textContent = 'Error. Intenta de nuevo.'; msg.style.color = '#ef4444'; msg.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

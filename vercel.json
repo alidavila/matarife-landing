@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "framework": null,
+  "buildCommand": "echo 'Static — no build'",
+  "outputDirectory": ".",
+  "routes": [
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
